@@ -1,0 +1,1 @@
+Floatplane redesign available at [floatplane.alig.pk](https://floatplane.alig.pk).
