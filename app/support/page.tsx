@@ -10,7 +10,7 @@ export default function Support() {
       <TopNav />
     </header>
     <main>
-    <div className="md:h-screen">
+    <div className="md:min-h-screen">
       <div className="md:max-w-7xl my-4 mx-auto p-4 space-y-4 md:space-y-8">
         <h1 className="font-semibold text-2xl md:text-4xl">
           Frequently Asked Questions

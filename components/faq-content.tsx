@@ -302,7 +302,7 @@ export function AllQuestions(props: { category: string; query: string }) {
                   </svg>
                 ) : (
                   <svg
-                    className="w-3 h-3 rotate shrink-0"
+                    className="w-3 h-3 shrink-0"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="fill-purple-500"
                     viewBox="0 0 10 6"
