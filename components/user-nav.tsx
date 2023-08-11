@@ -1,5 +1,5 @@
 "use client";
-import { LogoFull } from "./images";
+import Logo, { LogoFull } from "./images";
 import { useState, useEffect } from "react";
 import {
   Bars3BottomLeftIcon,
@@ -9,6 +9,7 @@ import {
 } from "@heroicons/react/20/solid";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
 import { Channels } from "@/modules/data";
+import Link from "next/link";
 export function UserNav() {
   const [Loading, setLoading] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
@@ -108,6 +109,7 @@ export function UserNav() {
   const DesktopView = () => {
     return (
       <div className="flex flex-col p-4 pt-8 space-y-8">
+        <div><Link href="/"><LogoFull classes="h-auto w-48" /></Link> </div>
         <div>
           <button type="button" className="flex items-center space-x-4 courser-pointer" onClick={() => setOpenProfile(!openProfile)}>
               <img
@@ -122,7 +124,7 @@ export function UserNav() {
                 </div>
               </div>
           </button>
-          <div className="z-20 origin-right absolute top-0 mt-20 w-48 rounded-md shadow-lg bg-white dark:bg-gray-800 space-y-4">
+          <div className="z-40 origin-right absolute top-0 mt-44 w-48 rounded-md shadow-lg bg-white dark:bg-gray-800 space-y-4">
               {openProfile && (
                 <div
                   className="py-1"
