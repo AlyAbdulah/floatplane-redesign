@@ -7,14 +7,13 @@ import {
   ArrowRightOnRectangleIcon,
   PlayCircleIcon,
   ArrowLeftCircleIcon,
+  MagnifyingGlassCircleIcon,
 } from "@heroicons/react/20/solid";
-import { UserCircleIcon } from "@heroicons/react/24/outline";
+import { MagnifyingGlassIcon, UserCircleIcon } from "@heroicons/react/24/outline";
 import { Channels } from "@/modules/data";
 import Link from "next/link";
 export function UserNav() {
   const [Loading, setLoading] = useState(false);
-  const [openMenu, setOpenMenu] = useState(false);
-  const [openProfile, setOpenProfile] = useState(false);
 
   const USERPROFILE = [
     { title: "Subscriptions", link: "#", icon: PlayCircleIcon, style: "" },
@@ -28,6 +27,8 @@ export function UserNav() {
     },
   ];
   const MobileView = () => {
+    const [openMenu, setOpenMenu] = useState(false);
+    const [openProfile, setOpenProfile] = useState(false);
     return (
       <>
         <nav className="flex flex-row justify-between items-center p-2">
@@ -38,7 +39,7 @@ export function UserNav() {
             />{" "}
           </div>
           <div>
-            <LogoFull classes="w-48 h-16" />{" "}
+            <Link href="/"> <LogoFull classes="w-48 h-16" /> </Link>
           </div>
           <div>
             <button onClick={() => setOpenProfile(!openProfile)} type="button">
@@ -78,7 +79,12 @@ export function UserNav() {
         {openMenu && (
           <div className="w-full p-4 bg-white dark:bg-gray-800 shadow-lg space-y-4">
             <div className="space-y-4">
-              <SearchChannel />
+              <SearchChannel 
+                iconClasses="text-gray-500 dark:text-gray-400" 
+                inputClasses="text-gray-900 border border-gray-300 bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" 
+                linkContainer=""
+                linkClasses="bg-gray-50 text-black dark:bg-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600" 
+              />
             </div>
             <div>
               {Loading && (
@@ -114,16 +120,26 @@ export function UserNav() {
       <aside className={`bg-primary text-white p-5 duration-300 hidden md:block ${expand ? "w-72 " : "w-20"} duration-300`}>
           
           <div className="flex justify-between flex-col h-screen">
-            <div className="text-2xl self-center">
+            <div className="text-2xl self-center space-y-4">
               <Link href="/" className="cursor-pointer">
                 {
                   expand ? <LogoFull classes="w-full h-auto" /> : <Logo w="48" h="48" />
                 }
               </Link>
+              {
+                expand ? 
+                <SearchChannel 
+                  iconClasses="text-white" 
+                  inputClasses="text-white border border-primary/50 bg-secondary/25 placeholder-gray-300"
+                  linkContainer="absolute top-0 mt-16 z-10" 
+                  linkClasses="bg-secondary/75 text-white hover:bg-gray-50/50"
+                /> : 
+                <MagnifyingGlassIcon className={`w-full h-auto text-white rounded-lg hover:bg-gray-50/25 p-2`} onClick={() => setExpand(!expand)} />
+              }
             </div>
             <div className={`pb-10 flex justify-between items-center ${expand ? "flex-row" : "flex-col space-y-4"} duration-500`}>
               <div>
-              <div className={`${viewProfile ? "opacity-100 visible" : "opacity-0 invisible"} shadow-md rounded-md border-primary/25 mb-4 duration-300`}>
+              <div className={`${viewProfile ? "opacity-100 visible" : "opacity-0 invisible"} shadow-md rounded-md border-primary/25 bg-secondary/75 mb-4 duration-300`}>
                 {USERPROFILE.map((item, index) => (
                     <a
                       key={index}
@@ -166,7 +182,8 @@ export function UserNav() {
     </>
   );
 }
-export function SearchChannel() {
+export function SearchChannel(props: { iconClasses: string, inputClasses: string, linkContainer:string, linkClasses: string }) {
+  const {iconClasses, inputClasses, linkContainer, linkClasses} = props
   const [query, setQuery] = useState("");
   const [showChannels, setShowChannels] = useState(Channels);
   useEffect(() => {
@@ -182,36 +199,22 @@ export function SearchChannel() {
     <>
       <div className="relative">
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-          <svg
-            className="w-4 h-4 text-gray-500 dark:text-gray-400"
-            aria-hidden="true"
-            fill="none"
-            viewBox="0 0 20 20"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-            />
-          </svg>
+          <MagnifyingGlassIcon className={`w-4 h-4 ${iconClasses}`} />
         </div>
         <input
           type="search"
           id="search"
-          className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+          className={`block w-full p-4 pl-10 text-sm rounded-lg my-2 ${inputClasses}`}
           placeholder="Search Channels"
           onChange={(event) => setQuery(event.target.value)}
         />
-      </div>
-      <div>
+        <div className={linkContainer}>
         {query != "" &&
           showChannels.map((data) => (
             <a
               href="#"
               key={data.id}
-              className="z-20 flex flex-row p-2 w-full space-x-2 md:py-4 items-center bg-gray-50 text-black dark:bg-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600"
+              className={`z-20 flex flex-row p-2 w-full space-x-2 md:py-4 items-center ${linkClasses}`}
             >
               <img
                 src={data.icon.childImages[1].path}
@@ -225,6 +228,7 @@ export function SearchChannel() {
               </span>
             </a>
           ))}
+      </div>
       </div>
     </>
   );
