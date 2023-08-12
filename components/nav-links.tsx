@@ -10,13 +10,13 @@ const LINKS = [
     title: "Login",
     ref: "/browse",
     style:
-      "block md:inline border-2 border-white py-2 px-6 rounded hover:bg-white hover:text-primary",
+      "block md:inline border-2 border-white py-2 px-6 rounded hover:bg-white hover:text-primary transition delay-150 duration-300 ease-in-out",
   },
   {
     title: "Sign Up",
     ref: "/browse",
     style:
-      "block md:inline border-2 border-white bg-white text-primary py-2 px-6 rounded hover:bg-transparent hover:text-white",
+      "block md:inline border-2 border-white bg-white text-primary py-2 px-6 rounded hover:bg-transparent hover:text-white transition delay-150 duration-300 ease-in-out",
   },
 ];
 import Link from "next/link";

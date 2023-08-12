@@ -11,6 +11,14 @@ export const metadata: Metadata = {
     title: 'Floatplane Redesign | alig.pk',
     description: 'Floatplane Redesign by Ali Abdullah| alig.pk',
     url: 'https://floatplane.alig.pk',
+    images: [
+      {
+        url: '/assests/images/preview.png',
+        width: 1920,
+        height: 1080,
+        alt: 'Digi Test Preview',
+      },
+    ],
     siteName: 'floatplane.Alig.pk',
     locale: 'en_US',
     type: 'website',

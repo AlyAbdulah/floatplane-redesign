@@ -6,6 +6,7 @@ import {
   WrenchIcon,
   ArrowRightOnRectangleIcon,
   PlayCircleIcon,
+  ArrowLeftCircleIcon,
 } from "@heroicons/react/20/solid";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
 import { Channels } from "@/modules/data";
@@ -107,59 +108,61 @@ export function UserNav() {
     );
   };
   const DesktopView = () => {
+    const [expand, setExpand] = useState(false)
+    const [viewProfile, setviewProfile] = useState(false)
     return (
-      <div className="flex flex-col p-4 pt-8 space-y-8">
-        <div><Link href="/"><LogoFull classes="h-auto w-48" /></Link> </div>
-        <div>
-          <button type="button" className="flex items-center space-x-4 courser-pointer" onClick={() => setOpenProfile(!openProfile)}>
-              <img
-                className="w-10 h-10 rounded-full"
-                src="/assests/images/user.png"
-                alt="User Profile Image"
-              />
-              <div className="font-medium dark:text-white">
-                <div>Ali Abdullah</div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">
-                  contact@alig.pk
-                </div>
-              </div>
-          </button>
-          <div className="z-40 origin-right absolute top-0 mt-44 w-48 rounded-md shadow-lg bg-white dark:bg-gray-800 space-y-4">
-              {openProfile && (
-                <div
-                  className="py-1"
-                  role="menu"
-                  aria-orientation="vertical"
-                  aria-labelledby="options-menu"
-                >
-                  {USERPROFILE.map((item, index) => (
+      <aside className={`bg-primary text-white p-5 duration-300 hidden md:block ${expand ? "w-72 " : "w-20"} duration-300`}>
+          
+          <div className="flex justify-between flex-col h-screen">
+            <div className="text-2xl self-center">
+              <Link href="/" className="cursor-pointer">
+                {
+                  expand ? <LogoFull classes="w-full h-auto" /> : <Logo w="48" h="48" />
+                }
+              </Link>
+            </div>
+            <div className={`pb-10 flex justify-between items-center ${expand ? "flex-row" : "flex-col space-y-4"} duration-500`}>
+              <div>
+              <div className={`${viewProfile ? "opacity-100 visible" : "opacity-0 invisible"} shadow-md rounded-md border-primary/25 mb-4 duration-300`}>
+                {USERPROFILE.map((item, index) => (
                     <a
                       key={index}
                       href={item.link}
-                      className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${item.style}`}
+                      className={`block rounded-lg hover:bg-gray-50/25 ${expand ? "p-2 pt-2.5" : "px-2 pt-2.5 pb-2"}`}
                     >
-                      <span className="inline-flex items-center">
-                        <item.icon className="h-6 w-6" />
-                        &nbsp;
-                        {item.title}
+                      <span className="inline-flex items-center space-x-2">
+                        <item.icon className="h-6 w-6 self-center" />
+                        {expand && (<> &nbsp; {item.title} </>) }
                       </span>
                     </a>
                   ))}
                 </div>
-              )}
+                <button type="button" className="flex items-center space-x-4 courser-pointer" onClick={() => setviewProfile(!viewProfile)}>
+                    <img
+                      className="w-10 h-10 rounded-full"
+                      src="/assests/images/user.png"
+                      alt="User Profile Image"
+                    />
+                    <div className={`font-medium dark:text-white ${expand ? "block" : "hidden"}`}>
+                      <div>Ali Abdullah</div>
+                      <div className="text-sm">
+                        contact@alig.pk
+                      </div>
+                    </div>
+                </button>
+              </div>
+              <button className={`cursor-pointer ${expand ? "self-end" : "self-center"}`} onClick={() => setExpand(!expand)}>
+                <ArrowLeftCircleIcon className={`w-10 h-10 ${expand ? "rotate-0" : "rotate-180"} duration-300`} />
+              </button>
             </div>
-
-        </div>
-        <div>
-          <SearchChannel />
-        </div>
-      </div>
+          </div>
+      </aside>
     );
   };
   return (
     <>
       <div className="md:hidden">{<MobileView />}</div>
-      <div className="hidden md:block">{<DesktopView />}</div>
+      <DesktopView />
     </>
   );
 }
