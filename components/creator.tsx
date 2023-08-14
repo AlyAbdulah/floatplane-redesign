@@ -15,9 +15,10 @@ const DATA = [
 export default function Creator() {
     return(
         <article className="bg-secondary text-white p-8 md:p-12 space-y-8">
-            <h2 className="text-center text-3xl">Next Step for Creators</h2>
-            <h3 className="text-center text-2xl">Join the Floatplane to</h3>
-            <div className="grid gap-8 md:grid-cols-2 md:max-w-6xl mx-auto">
+            <h2 className="text-center text-3xl md:text-5xl font-medium">Next Step for Creators</h2>
+            <h3 className="text-center text-2xl md:text-3xl">Join the Floatplane to</h3>
+            <div className="@container">
+            <div className="grid gap-8 @3xl:grid-cols-2 @3xl:max-w-6xl mx-auto">
                 {
                     DATA.map((content, index) => <div key={index} className="space-y-4">
                         <div className="font-semibold text-xl">{content.heading}</div>
@@ -26,7 +27,8 @@ export default function Creator() {
                     </div>)
                 }
             </div>
-            <div className="py-4 text-xl font-bold text-center mx-auto"><ButtonPrimary text="Join as a Creator" link="#" /></div>
+            </div>
+            <div className="py-4 text-xl font-bold text-center mx-auto"><div className="hover:-translate-y-2 duration-300"><ButtonPrimary text="Join as a Creator" link="#" /></div></div>
         </article>
     )
 }

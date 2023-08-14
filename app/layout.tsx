@@ -1,8 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
+import Script from 'next/script'
 
-const inter = Inter({ subsets: ['latin'] })
+const font = Roboto({ subsets: ['latin'], weight: ['500'] })
 
 export const metadata: Metadata = {
   title: 'Floatplane Redesign | alig.pk',
@@ -32,7 +33,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + "bg-white text-black dark:bg-gray-950 dark:text-white subpixel-antialiased scroll-smooth"}>
+            <Script src="https://www.googletagmanager.com/gtag/js?id=G-4S876Z8XE0" />
+            <Script id="google-analytics">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+              
+                gtag('config', 'G-4S876Z8XE0');
+              `}
+            </Script>
+        <body className={font.className + "bg-white text-black dark:bg-gray-950 dark:text-white subpixel-antialiased scroll-smooth"}>
           {children}
       </body>
     </html>
