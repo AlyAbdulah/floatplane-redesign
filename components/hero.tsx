@@ -18,7 +18,7 @@ export default function Hero() {
             scenes!
           </h2>
           <div className="py-4 my-2 text-xl font-bold">
-            <div className="hover:-translate-y-2 duration-300"><ButtonDefault text="Get Started" link="/browse" /></div>
+            <div className="hover:-translate-y-2 duration-300 w-fit"><ButtonDefault text="Get Started" link="/browse" /></div>
           </div>
         </div>
       </article>

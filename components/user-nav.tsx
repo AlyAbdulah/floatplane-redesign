@@ -12,6 +12,7 @@ import {
 import { MagnifyingGlassIcon, UserCircleIcon } from "@heroicons/react/24/outline";
 import { Channels } from "@/modules/data";
 import Link from "next/link";
+import { ShowMySubscriptions } from "./subscriptions";
 export function UserNav() {
   const [Loading, setLoading] = useState(false);
 
@@ -131,15 +132,18 @@ export function UserNav() {
                 <SearchChannel 
                   iconClasses="text-white" 
                   inputClasses="text-white border border-primary/50 bg-secondary/25 placeholder-gray-300"
-                  linkContainer="absolute top-0 mt-16 z-10" 
+                  linkContainer="absolute top-0 mt-14 z-10 bg-secondary rounded-lg max-h-96 overflow-y-scroll" 
                   linkClasses="bg-secondary/75 text-white hover:bg-gray-50/50"
                 /> : 
                 <MagnifyingGlassIcon className={`w-full h-auto text-white rounded-lg hover:bg-gray-50/25 p-2`} onClick={() => setExpand(!expand)} />
               }
             </div>
+            <div className={`mt-4 mb-8 flex flex-col ${expand ? "overflow-y-scroll" : "overflow-y-hidden items-center"}`}>
+              <ShowMySubscriptions expand={expand} />
+            </div>
             <div className={`pb-10 flex justify-between items-center ${expand ? "flex-row" : "flex-col space-y-4"} duration-500`}>
               <div>
-              <div className={`${viewProfile ? "opacity-100 visible" : "opacity-0 invisible"} shadow-md rounded-md border-primary/25 bg-secondary/75 mb-4 duration-300`}>
+              <div className={`${viewProfile ? "opacity-100 visible" : "opacity-0 invisible"} fixed bottom-0 mb-28 shadow-md rounded-md border-primary/25 bg-secondary/75 duration-300`}>
                 {USERPROFILE.map((item, index) => (
                     <a
                       key={index}
@@ -209,26 +213,26 @@ export function SearchChannel(props: { iconClasses: string, inputClasses: string
           onChange={(event) => setQuery(event.target.value)}
         />
         <div className={linkContainer}>
-        {query != "" &&
-          showChannels.map((data) => (
-            <a
-              href="#"
-              key={data.id}
-              className={`z-20 flex flex-row p-2 w-full space-x-2 md:py-4 items-center ${linkClasses}`}
-            >
-              <img
-                src={data.icon.childImages[1].path}
-                alt={`Image for ${data.title} Channel`}
-                height={data.icon.childImages[1].height}
-                width={data.icon.childImages[1].width}
-                className="rounded-lg w-6 h-6"
-              />
-              <span className="text-medium text-xl md:text-lg">
-                {data.title}
-              </span>
-            </a>
-          ))}
-      </div>
+          {query != "" && typeof(query) === "string" &&
+            showChannels.map((data) => (
+              <a
+                href="#"
+                key={data.id}
+                className={`z-20 flex flex-row p-2 w-full space-x-2 md:py-4 items-center ${linkClasses}`}
+              >
+                <img
+                  src={data.icon.childImages[1].path}
+                  alt={`Image for ${data.title} Channel`}
+                  height={data.icon.childImages[1].height}
+                  width={data.icon.childImages[1].width}
+                  className="rounded-lg w-6 h-6"
+                />
+                <span className="text-medium text-xl md:text-lg">
+                  {data.title}
+                </span>
+              </a>
+            ))}
+        </div>
       </div>
     </>
   );

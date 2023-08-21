@@ -28,7 +28,7 @@ export default function Creator() {
                 }
             </div>
             </div>
-            <div className="py-4 text-xl font-bold text-center mx-auto"><div className="hover:-translate-y-2 duration-300"><ButtonPrimary text="Join as a Creator" link="#" /></div></div>
+            <div className="py-4 text-xl font-bold text-center mx-auto"><div className="hover:-translate-y-2 duration-300 text-center mx-auto w-fit"><ButtonPrimary text="Join as a Creator" link="#" /></div></div>
         </article>
     )
 }

@@ -1,4 +1,5 @@
-export const Channels = [{
+export const Channels = [
+  {
     "id": "59f94c0bdd241b70349eb72b",
     "owner": {
       "id": "59f94c0bdd241b70349eb723",
@@ -166,7 +167,7 @@ export const Channels = [{
     "subscriptionPlans": [{
       "id": "5d506f2f7c7e6afa2ef1e246",
       "title": "1080p Plan - Videos on Demand + Live Streams",
-      "description": "This plan gives you access to all published videos at up to 1080p detail.  You also get access to 1080p live streams exclusive to Floatplane.  This also grants you access to the private channels on the Tech Deals Discord, link your Floatplane account to Discord to be automatically upgraded.",
+      "description": "This plan gives you access to all published videos at up to 1080p detail.\nYou also get access to 1080p live streams exclusive to Floatplane.\nThis also grants you access to the private channels on the Tech Deals Discord, link your Floatplane account to Discord to be automatically upgraded.",
       "price": "5.00",
       "priceYearly": "50.00",
       "currency": "usd",
@@ -179,7 +180,7 @@ export const Channels = [{
     }, {
       "id": "5e1710272aae3bc9cabdf505",
       "title": "4K - All Access Plan",
-      "description": "This plan gives you access to all published videos at up to 4K detail.  You also get access to 1080p live streams exclusive to Floatplane.  This also grants you access to the private channels on the Tech Deals Discord, link your Floatplane account to Discord to be automatically upgraded.  BONUS - This plan allows you to download the videos in high quality for off-line viewing!  This is a great way to increase your level of support if you really love our content!",
+      "description": "This plan gives you access to all published videos at up to 4K detail.\nYou also get access to 1080p live streams exclusive to Floatplane.\nThis also grants you access to the private channels on the Tech Deals Discord, link your Floatplane account to Discord to be automatically upgraded.\nBONUS - This plan allows you to download the videos in high quality for off-line viewing!\nThis is a great way to increase your level of support if you really love our content!",
       "price": "10.00",
       "priceYearly": "100.00",
       "currency": "usd",
@@ -236,7 +237,7 @@ export const Channels = [{
     "subscriptionPlans": [{
       "id": "5d3810abee1456a4190a1bc5",
       "title": "First Floater",
-      "description": "You'll get both pre-release (as early as we can) content from both the UFD Tech & Hot News channels. Also, we will do our best to make sure that no pre-roll/post-roll ads will show up in the content. There may be some fully sponsored videos that appear here, but those will be infrequent. \n\nA basic plan that covers up to 1080p VOD's as well as livestreaming",
+      "description": "You'll get both pre-release (as early as we can) content from both the UFD Tech & Hot News channels.\nwe will do our best to make sure that no pre-roll/post-roll ads will show up in the content.\nThere may be some fully sponsored videos that appear here, but those will be infrequent.\nA basic plan that covers up to 1080p VOD's as well as livestreaming",
       "price": "5.00",
       "priceYearly": null,
       "currency": "usd",
@@ -289,7 +290,7 @@ export const Channels = [{
     "subscriptionPlans": [{
       "id": "5d48c8536825b5780db93cee",
       "title": "Basic",
-      "description": "Just a basic plan for supporting Level1 and getting things squared away on Floatplane!",
+      "description": "Just a basic plan for supporting Level 1 and getting things squared away on Floatplane!",
       "price": "5.00",
       "priceYearly": "48.00",
       "currency": "usd",
@@ -359,7 +360,7 @@ export const Channels = [{
     }, {
       "id": "5e01593fb85a2718965843fe",
       "title": "Highfive Club",
-      "description": "It's my HIGHFIVE CLUB on Floatplane! Buy a year in advance and get ONE MONTH FREE! You'll have access to all the regular content, PLUS, all of the bonus content the HIGHFIVE CLUB gets. There are After The Five episodes, and special uploads sometimes giving you a peek at new stuff before everyone else.",
+      "description": "It's my HIGHFIVE CLUB on Floatplane! Buy a year in advance and get ONE MONTH FREE! You'll have access to all the regular content\nPLUS, all of the bonus content the HIGHFIVE CLUB gets.\nThere are After The Five episodes, and special uploads sometimes giving you a peek at new stuff before everyone else.",
       "price": "5.00",
       "priceYearly": "55.00",
       "currency": "usd",
@@ -372,7 +373,7 @@ export const Channels = [{
     }, {
       "id": "5e015a3fb85a27189658440c",
       "title": "Download Plan",
-      "description": "All the HIGHFIVE club has to offer, plus being able to download it - PLUS ONE MONTH FREE if paid yearly! This is the one for you if you're looking to download the episodes to your own server to watch at home!",
+      "description": "All the HIGHFIVE club has to offer, plus being able to download it - PLUS ONE MONTH FREE if paid yearly!\nThis is the one for you if you're looking to download the episodes to your own server to watch at home!",
       "price": "10.00",
       "priceYearly": "110.00",
       "currency": "usd",
@@ -398,7 +399,7 @@ export const Channels = [{
     }, {
       "id": "5e066e0a2a4d3918b4ac4c28",
       "title": "bawwlllerrrr",
-      "description": "GEESH.\n\nThis tier originally created for KevlarCondom, and it's a $100/month plan. It's beyond words incredible for you to want to support at this level. WOW. Obviously, you get everything, and paying a year in advance gets you one month for free :)",
+      "description": "GEESH.This tier originally created for KevlarCondom, and it's a $100/month plan. It's beyond words incredible for you to want to support at this level. WOW. Obviously, you get everything, and paying a year in advance gets you one month for free :)",
       "price": "100.00",
       "priceYearly": "1100.00",
       "currency": "usd",
@@ -1628,4 +1629,5 @@ export const Channels = [{
     "subscriberCountDisplay": "hide",
     "incomeDisplay": false,
     "defaultChannel": "63fe42c609e691e4e36de97f"
-  }]
+  }
+]
