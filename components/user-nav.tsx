@@ -33,7 +33,7 @@ export function UserNav() {
   ];
   const MobileView = () => {
     const [openMenu, setOpenMenu] = useState(false);
-    const [openSubs, setOpenSubs] = useState(true);
+    const [openSubs, setOpenSubs] = useState(false);
     const [openProfile, setOpenProfile] = useState(false);
 
     return (
@@ -163,7 +163,7 @@ export function UserNav() {
               />
             )}
             <div
-              className={`mt-4 mb-8 flex flex-col max-h-[calc(100vh-20rem)] ${
+              className={`mt-4 mb-8 flex flex-col max-h-[calc(100vh-18rem)] ${
                 expand ? "overflow-y-scroll" : "overflow-y-hidden items-center"
               }`}
             >
