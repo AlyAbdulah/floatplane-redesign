@@ -10,7 +10,10 @@ import {
   ArrowLeftCircleIcon,
   MagnifyingGlassCircleIcon,
 } from "@heroicons/react/20/solid";
-import { MagnifyingGlassIcon, UserCircleIcon } from "@heroicons/react/24/outline";
+import {
+  MagnifyingGlassIcon,
+  UserCircleIcon,
+} from "@heroicons/react/24/outline";
 import { Channels } from "@/modules/data";
 import Link from "next/link";
 import { ShowMySubscriptions } from "./subscriptions";
@@ -30,9 +33,9 @@ export function UserNav() {
   ];
   const MobileView = () => {
     const [openMenu, setOpenMenu] = useState(false);
-    const [openSubs, setOpenSubs] = useState(false);
+    const [openSubs, setOpenSubs] = useState(true);
     const [openProfile, setOpenProfile] = useState(false);
-    
+
     return (
       <>
         <nav className="flex flex-row justify-between items-center p-2">
@@ -43,7 +46,10 @@ export function UserNav() {
             />{" "}
           </div>
           <div>
-            <Link href="/"> <LogoFull classes="w-48 h-16" /> </Link>
+            <Link href="/">
+              {" "}
+              <LogoFull classes="w-48 h-16" />{" "}
+            </Link>
           </div>
           <div>
             <button onClick={() => setOpenProfile(!openProfile)} type="button">
@@ -51,7 +57,6 @@ export function UserNav() {
                 src="/assests/images/user.png"
                 className="w-12 h-auto rounded-lg"
                 alt="user Profile"
-                
               />{" "}
             </button>
             <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg z-10 bg-white divide-y divide-gray-100 dark:bg-gray-700">
@@ -65,7 +70,9 @@ export function UserNav() {
                   {USERPROFILE.map((item, index) => (
                     <a
                       key={index}
-                      onClick={() => item.title == "Subscriptions" && setOpenSubs(!openSubs)}
+                      onClick={() =>
+                        item.title == "Subscriptions" && setOpenSubs(!openSubs)
+                      }
                       href={item.link}
                       className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${item.style}`}
                     >
@@ -84,11 +91,11 @@ export function UserNav() {
         {openMenu && (
           <div className="w-full p-4 bg-white dark:bg-gray-800 shadow-lg space-y-4">
             <div className="space-y-4">
-              <SearchChannel 
-                iconClasses="text-gray-500 dark:text-gray-400" 
-                inputClasses="text-gray-900 border border-gray-300 bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" 
+              <SearchChannel
+                iconClasses="text-gray-500 dark:text-gray-400"
+                inputClasses="text-gray-900 border border-gray-300 bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                 linkContainer=""
-                linkClasses="bg-gray-50 text-black dark:bg-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600" 
+                linkClasses="bg-gray-50 text-black dark:bg-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600"
               />
             </div>
             <div>
@@ -118,75 +125,112 @@ export function UserNav() {
 
         {openSubs && (
           <div className="w-full p-4 bg-white dark:bg-gray-800 rounded-md shadow-lg text-center dark:border dark:border-t-transparent dark:border-x-transparent dark:border-b-gray-400">
-              <div className="flex flex-row flex-wrap space-x-2"><ShowMySubscriptions expand={false} /></div>
+              <ShowMySubscriptions expand={false} containerClass="grid gap-2 grid-cols-3" btnClass="justify-center"/>
           </div>
         )}
       </>
     );
   };
   const DesktopView = () => {
-    const [expand, setExpand] = useState(false)
-    const [viewProfile, setviewProfile] = useState(false)
+    const [expand, setExpand] = useState(false);
+    const [viewProfile, setviewProfile] = useState(false);
     return (
-      <aside className={`bg-primary text-white p-5 duration-300 hidden md:block ${expand ? "w-72 " : "w-20"} duration-300`}>
-          
-          <div className="flex justify-between flex-col h-screen">
-            <div className="text-2xl self-center space-y-4">
-              <Link href="/" className="cursor-pointer">
-                {
-                  expand ? <LogoFull classes="w-full h-auto" /> : <Logo w="48" h="48" />
-                }
-              </Link>
-              {
-                expand ? 
-                <SearchChannel 
-                  iconClasses="text-white" 
-                  inputClasses="text-white border border-primary/50 bg-secondary/25 placeholder-gray-300"
-                  linkContainer="absolute top-0 mt-14 z-10 bg-secondary rounded-lg max-h-96 overflow-y-scroll" 
-                  linkClasses="bg-secondary/75 text-white hover:bg-gray-50/50"
-                /> : 
-                <MagnifyingGlassIcon className={`w-full h-auto text-white rounded-lg hover:bg-gray-50/25 p-2`} onClick={() => setExpand(!expand)} />
-              }
-              <div className={`mt-4 mb-8 flex flex-col ${expand ? "overflow-y-scroll" : "overflow-y-hidden items-center"}`}>
-              <ShowMySubscriptions expand={expand} />
-            </div>
-            </div>
-            
-            <div className={`pb-10 flex justify-between items-center ${expand ? "flex-row" : "flex-col space-y-4"} duration-500`}>
-              <div>
-              <div className={`${viewProfile ? "opacity-100 visible" : "opacity-0 invisible"} fixed bottom-0 mb-28 shadow-md rounded-md border-primary/25 bg-secondary/75 duration-300`}>
-                {USERPROFILE.map((item, index) => (
-                    <a
-                      key={index}
-                      href={item.link}
-                      className={`block rounded-lg hover:bg-gray-50/25 ${expand ? "p-2 pt-2.5" : "px-2 pt-2.5 pb-2"}`}
-                    >
-                      <span className="inline-flex items-center space-x-2">
-                        <item.icon className="h-6 w-6 self-center" />
-                        {expand && (<> &nbsp; {item.title} </>) }
-                      </span>
-                    </a>
-                  ))}
-                </div>
-                <button type="button" className="flex items-center space-x-4 courser-pointer" onClick={() => setviewProfile(!viewProfile)}>
-                    <img
-                      className="w-10 h-10 rounded-full"
-                      src="/assests/images/user.png"
-                      alt="User Profile Image"
-                    />
-                    <div className={`font-medium dark:text-white ${expand ? "block" : "hidden"}`}>
-                      <div>Ali Abdullah</div>
-                      <div className="text-sm">
-                        contact@alig.pk
-                      </div>
-                    </div>
-                </button>
-              </div>
-              <button className={`cursor-pointer ${expand ? "self-end" : "self-center"}`} onClick={() => setExpand(!expand)}>
-                <ArrowLeftCircleIcon className={`w-10 h-10 ${expand ? "rotate-0" : "rotate-180"} duration-300`} />
-              </button>
+      <aside
+        className={`bg-primary text-white p-5 duration-300 hidden md:block ${
+          expand ? "w-72 " : "w-20"
+        } duration-300`}
+      >
+        <div className="flex justify-between flex-col h-screen">
+          <div className="text-2xl self-center space-y-4">
+            <Link href="/" className="cursor-pointer">
+              {expand ? (
+                <LogoFull classes="w-full h-auto" />
+              ) : (
+                <Logo w="48" h="48" />
+              )}
+            </Link>
+            {expand ? (
+              <SearchChannel
+                iconClasses="text-white"
+                inputClasses="text-white border border-primary/50 bg-secondary/25 placeholder-gray-300"
+                linkContainer="absolute top-0 mt-14 z-10 bg-secondary rounded-lg max-h-96 overflow-y-scroll"
+                linkClasses="bg-secondary/75 text-white hover:bg-gray-50/50"
+              />
+            ) : (
+              <MagnifyingGlassIcon
+                className={`w-full h-auto text-white rounded-lg hover:bg-gray-50/25 p-2`}
+                onClick={() => setExpand(!expand)}
+              />
+            )}
+            <div
+              className={`mt-4 mb-8 flex flex-col max-h-[calc(100vh-20rem)] ${
+                expand ? "overflow-y-scroll" : "overflow-y-hidden items-center"
+              }`}
+            >
+              <ShowMySubscriptions expand={expand} containerClass="" btnClass="justify-start" />
             </div>
           </div>
+
+          <div
+            className={`pb-10 flex justify-between items-center ${
+              expand ? "flex-row" : "flex-col space-y-4"
+            } duration-500`}
+          >
+            <div>
+              <div
+                className={`${
+                  viewProfile ? "opacity-100 visible" : "opacity-0 invisible"
+                } fixed bottom-0 mb-28 shadow-md rounded-md border-primary/25 bg-secondary/75 duration-300`}
+              >
+                {USERPROFILE.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.link}
+                    className={`block rounded-lg hover:bg-gray-50/25 ${
+                      expand ? "p-2 pt-2.5" : "px-2 pt-2.5 pb-2"
+                    }`}
+                  >
+                    <span className="inline-flex items-center space-x-2">
+                      <item.icon className="h-6 w-6 self-center" />
+                      {expand && <> &nbsp; {item.title} </>}
+                    </span>
+                  </a>
+                ))}
+              </div>
+              <button
+                type="button"
+                className="flex items-center space-x-4 courser-pointer"
+                onClick={() => setviewProfile(!viewProfile)}
+              >
+                <img
+                  className="w-10 h-10 rounded-full"
+                  src="/assests/images/user.png"
+                  alt="User Profile Image"
+                />
+                <div
+                  className={`font-medium dark:text-white ${
+                    expand ? "block" : "hidden"
+                  }`}
+                >
+                  <div>Ali Abdullah</div>
+                  <div className="text-sm">contact@alig.pk</div>
+                </div>
+              </button>
+            </div>
+            <button
+              className={`cursor-pointer ${
+                expand ? "self-end" : "self-center"
+              }`}
+              onClick={() => setExpand(!expand)}
+            >
+              <ArrowLeftCircleIcon
+                className={`w-10 h-10 ${
+                  expand ? "rotate-0" : "rotate-180"
+                } duration-300`}
+              />
+            </button>
+          </div>
+        </div>
       </aside>
     );
   };
@@ -197,8 +241,13 @@ export function UserNav() {
     </>
   );
 }
-export function SearchChannel(props: { iconClasses: string, inputClasses: string, linkContainer:string, linkClasses: string }) {
-  const {iconClasses, inputClasses, linkContainer, linkClasses} = props
+export function SearchChannel(props: {
+  iconClasses: string;
+  inputClasses: string;
+  linkContainer: string;
+  linkClasses: string;
+}) {
+  const { iconClasses, inputClasses, linkContainer, linkClasses } = props;
   const [query, setQuery] = useState("");
   const [showChannels, setShowChannels] = useState(Channels);
   useEffect(() => {
@@ -224,7 +273,8 @@ export function SearchChannel(props: { iconClasses: string, inputClasses: string
           onChange={(event) => setQuery(event.target.value)}
         />
         <div className={linkContainer}>
-          {query != "" && typeof(query) === "string" &&
+          {query != "" &&
+            typeof query === "string" &&
             showChannels.map((data) => (
               <a
                 href="#"
