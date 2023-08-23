@@ -19,7 +19,7 @@ export function ShowSubscriptions() {
   };
 
   useEffect(() => {
-    //localStorage.removeItem("ids")
+    localStorage.removeItem("ids")
   }, [])
 
   return (
