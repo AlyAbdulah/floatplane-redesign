@@ -539,7 +539,7 @@ export const Channels = [
     }, {
       "id": "61b2a8f10e640a404b83fccd",
       "title": "An Uber Passionate Gamer",
-      "description": "- Everything from the Previous Tiers\n- Pick a game to be streamed on the Twitch page, once a month*\n- Vote on content ideas, future projects, and direction of content.\n\n*Within reason; the game cannot be TOS or get me into any legal trouble.",
+      "description": "- Everything from the Previous Tiers\n- Pick a game to be streamed on the Twitch page, once a month*\n- Vote on content ideas, future projects, and direction of content.\n*Within reason; the game cannot be TOS or get me into any legal trouble.",
       "price": "25.00",
       "priceYearly": null,
       "currency": "usd",
@@ -552,7 +552,7 @@ export const Channels = [
     }, {
       "id": "61b2a9b0306b3952b4f69b5e",
       "title": "The Ultimately Passionate Gamer",
-      "description": "- Everything from the previous tiers\n- PICK A VIDEO TOPIC; A FULL RESEARCH TOPIC; ONCE A MONTH*\n\n*The topic will be discussed in a 1-on-1 DM on Discord. The topic has to be related to video games, and cannot get me into legal trouble. All will be discussed in the DMs.",
+      "description": "- Everything from the previous tiers\n- PICK A VIDEO TOPIC; A FULL RESEARCH TOPIC; ONCE A MONTH*\n*The topic will be discussed in a 1-on-1 DM on Discord. The topic has to be related to video games, and cannot get me into legal trouble. All will be discussed in the DMs.",
       "price": "50.00",
       "priceYearly": null,
       "currency": "usd",
@@ -565,7 +565,7 @@ export const Channels = [
     }, {
       "id": "624e440908c1f26addb609e1",
       "title": "A Very Passionate Gamer",
-      "description": "- Everything from the Previous Tiers\n- Choose a game to be streamed on the weekly Floatplane streams, once a month\n- Access to the Super Secret Phone Number; Call in on Certain Streams*\n\n*This is the phone number used to call the past; the phone is hooked up to a time machine back in 1999; the number will call an alternate reality version of Tyler McVicker who was born in 1974, and works as a freelance games journalist for magazines and websites of the day. The phone calls will only be connected during these alternate reality events, the broadcasts of which will be announced on Discord beforehand. ",
+      "description": "- Everything from the Previous Tiers\n- Choose a game to be streamed on the weekly Floatplane streams, once a month\n- Access to the Super Secret Phone Number; Call in on Certain Streams*\n*This is the phone number used to call the past; the phone is hooked up to a time machine back in 1999; the number will call an alternate reality version of Tyler McVicker who was born in 1974, and works as a freelance games journalist for magazines and websites of the day. The phone calls will only be connected during these alternate reality events, the broadcasts of which will be announced on Discord beforehand. ",
       "price": "10.00",
       "priceYearly": null,
       "currency": "usd",
@@ -648,7 +648,7 @@ export const Channels = [
     }, {
       "id": "5ea9cab93d93c37399b020b6",
       "title": "LEVEL UP (4K + DOWNLOAD)",
-      "description": "For those who want to support a little more, this tier includes:\n-Early access to most non-embargo videos (up to a week)\n-Virtually no baked in pre-roll ads / sponsor placements\n-Access to the private Floatplane channel in Discord\n-My undying appreciation (NOW with 50% more GRATITUDE)\n\nPLUS\n-4K Quality\n-Ability to download videos up to 4K",
+      "description": "For those who want to support a little more, this tier includes:\n-Early access to most non-embargo videos (up to a week)\n-Virtually no baked in pre-roll ads / sponsor placements\n-Access to the private Floatplane channel in Discord\n-My undying appreciation (NOW with 50% more GRATITUDE)\nPLUS\n-4K Quality\n-Ability to download videos up to 4K",
       "price": "5.00",
       "priceYearly": null,
       "currency": "usd",
@@ -750,8 +750,8 @@ export const Channels = [
     },
     "title": "Lawful Masses with Leonard French",
     "urlname": "LawfulMasses",
-    "description": "Hello and thank you for reading!\n\nI'm Leonard French, a copyright attorney actively practicing in Pennsylvania.\n\nIt is my goal to bring you high-quality, well-researched, and fun videos on the law. The major focus will be on internet related law, but so many areas of the legal landscape are so complex, yet full of amazing stories just waiting to be told.\n\nOver the last eight years, I've made it my job to defend individuals and small businesses in copyright disputes. I've represented hundreds of clients in various federal courts around the country. It is 110% clear to me that many people need more information about the law.\n\nIn return for your pledge, you get mine: I pledge to bring you weekly interesting news and information videos on various topics of law. We do our best to put out daily videos and pledge to put out at least three-to-four per week minimum.\n\nThank you for your support!",
-    "about": "Hello and thank you for reading!\n\nI'm Leonard French, a copyright attorney actively practicing in Pennsylvania.\n\nIt is my goal to bring you high-quality, well-researched, and fun videos on the law. The major focus will be on internet related law, but so many areas of the legal landscape are so complex, yet full of amazing stories just waiting to be told.\n\nOver the last eight years, I've made it my job to defend individuals and small businesses in copyright disputes. I've represented hundreds of clients in various federal courts around the country. It is 110% clear to me that many people need more information about the law.\n\nIn return for your pledge, you get mine: I pledge to bring you weekly interesting news and information videos on various topics of law. We do our best to put out daily videos and pledge to put out at least three-to-four per week minimum.\n\nThank you for your support!",
+    "description": "Hello and thank you for reading!\nI'm Leonard French, a copyright attorney actively practicing in Pennsylvania.\nIt is my goal to bring you high-quality, well-researched, and fun videos on the law. The major focus will be on internet related law, but so many areas of the legal landscape are so complex, yet full of amazing stories just waiting to be told.\nOver the last eight years, I've made it my job to defend individuals and small businesses in copyright disputes. I've represented hundreds of clients in various federal courts around the country. It is 110% clear to me that many people need more information about the law.\nIn return for your pledge, you get mine: I pledge to bring you weekly interesting news and information videos on various topics of law. We do our best to put out daily videos and pledge to put out at least three-to-four per week minimum.\nThank you for your support!",
+    "about": "Hello and thank you for reading!\nI'm Leonard French, a copyright attorney actively practicing in Pennsylvania.\nIt is my goal to bring you high-quality, well-researched, and fun videos on the law. The major focus will be on internet related law, but so many areas of the legal landscape are so complex, yet full of amazing stories just waiting to be told.\nOver the last eight years, I've made it my job to defend individuals and small businesses in copyright disputes. I've represented hundreds of clients in various federal courts around the country. It is 110% clear to me that many people need more information about the law.\nIn return for your pledge, you get mine: I pledge to bring you weekly interesting news and information videos on various topics of law. We do our best to put out daily videos and pledge to put out at least three-to-four per week minimum.\nThank you for your support!",
     "category": {
       "id": "59f94c0bdd241b70349eb729",
       "title": "Informational"
@@ -880,7 +880,7 @@ export const Channels = [
     "subscriptionPlans": [{
       "id": "5e0bb453fd9eec0f443b3d81",
       "title": "Floatplane Subscriber",
-      "description": "This is the basic level of subscription to support Forgotten Weapons and view content here on Floatplane. You will get all new videos as they are uploaded, and the back catalog will be added over time (it's a slow process). You will also  see periodic (a couple times per week) behind the scenes content of what goes on in Ian's life: the \"Apocrypha\" video series. Generally not specifically gun-related. Just neat or interesting things at home and on the road! \n\nThis level allows basic streamed video viewing only; not downloading.",
+      "description": "This is the basic level of subscription to support Forgotten Weapons and view content here on Floatplane. You will get all new videos as they are uploaded, and the back catalog will be added over time (it's a slow process). You will also  see periodic (a couple times per week) behind the scenes content of what goes on in Ian's life: the \"Apocrypha\" video series. Generally not specifically gun-related. Just neat or interesting things at home and on the road! \nThis level allows basic streamed video viewing only; not downloading.",
       "price": "3.00",
       "priceYearly": null,
       "currency": "usd",
@@ -893,7 +893,7 @@ export const Channels = [
     }, {
       "id": "5e0d294c7e9f73dfffa28504",
       "title": "Early Video Access",
-      "description": "In order to maintain a video every day, I do a lot of advance scheduling of videos to cover times when I am traveling or filming (or sleeping). As a Subscriber at this level, you will be able to watch each video when it is complete and uploaded - typically a week before it publishes and sometimes a month before. You will also be able to download copies of videos to save for personal use offline, and you will have access to the behind-the-scenes Apocrypha videos.\n\nNOTE: Floatplane does note currently support different publication dates for different subscription plans, but that feature is coming. I will implement it here as soon as the platform allows!",
+      "description": "In order to maintain a video every day, I do a lot of advance scheduling of videos to cover times when I am traveling or filming (or sleeping). As a Subscriber at this level, you will be able to watch each video when it is complete and uploaded - typically a week before it publishes and sometimes a month before. You will also be able to download copies of videos to save for personal use offline, and you will have access to the behind-the-scenes Apocrypha videos.\nNOTE: Floatplane does note currently support different publication dates for different subscription plans, but that feature is coming. I will implement it here as soon as the platform allows!",
       "price": "20.00",
       "priceYearly": null,
       "currency": "usd",
@@ -943,7 +943,7 @@ export const Channels = [
     "title": "Gear Seekers",
     "urlname": "GearSeekers",
     "description": "Tech with a cheeky Aussie twist.",
-    "about": "You peek, We seek!\n\nWe're bringing tech to life with a cheeky Aussie twist.\n\nGear Seekers is a concoction of custom PC builds, hardware reviews, un-boxings & install guides, lots of Linux, a smattering of retro PC builds and much much more.\n",
+    "about": "You peek, We seek!\nWe're bringing tech to life with a cheeky Aussie twist.\nGear Seekers is a concoction of custom PC builds, hardware reviews, un-boxings & install guides, lots of Linux, a smattering of retro PC builds and much much more.\n",
     "category": {
       "id": "59f94c0bdd241b70349eb727",
       "title": "Technology"
@@ -976,7 +976,7 @@ export const Channels = [
     "subscriptionPlans": [{
       "id": "5e182f33cf10061b3cd5c9bd",
       "title": "Official Gear Seeker",
-      "description": "One of us! One of us!!\nYour subscription means you’re a card carrying Gear Seeker!\n\n\nCOMING SOON: Music downloads - Original GS music available for personal use!",
+      "description": "One of us! One of us!!\nYour subscription means you’re a card carrying Gear Seeker!\nCOMING SOON: Music downloads - Original GS music available for personal use!",
       "price": "3.00",
       "priceYearly": "30.00",
       "currency": "usd",
@@ -989,7 +989,7 @@ export const Channels = [
     }, {
       "id": "5e190ebd6b12ee8513f32f5a",
       "title": "4K Gear Seeker",
-      "description": "Your subscription means you’re a card carrying 4K Gear Seeker!\n\n\nCOMING SOON: Music downloads - Original GS music available for personal use!",
+      "description": "Your subscription means you’re a card carrying 4K Gear Seeker!\nCOMING SOON: Music downloads - Original GS music available for personal use!",
       "price": "10.00",
       "priceYearly": "100.00",
       "currency": "usd",
@@ -1096,7 +1096,7 @@ export const Channels = [
     "title": "Hardware Unboxed",
     "urlname": "HardwareUnboxed",
     "description": "We test the latest and greatest PC hardware and games on release day so you can get the scoop!",
-    "about": "Handy links:\n\nDiscord: [link](https://www.floatplane.com/post/u6F0UdEh8t)\n\nDisplay Profiles: [link](https://www.floatplane.com/post/F9ktSJtmOF)\n\nBTS Video Archive: [link](https://www.floatplane.com/post/CddAKGSahL)\n\nLive Stream Archive: [link](https://www.floatplane.com/post/91ZLPrHnJI)",
+    "about": "Handy links:\nDiscord: [link](https://www.floatplane.com/post/u6F0UdEh8t)\nDisplay Profiles: [link](https://www.floatplane.com/post/F9ktSJtmOF)\nBTS Video Archive: [link](https://www.floatplane.com/post/CddAKGSahL)\nLive Stream Archive: [link](https://www.floatplane.com/post/91ZLPrHnJI)",
     "category": {
       "id": "59f94c0bdd241b70349eb727",
       "title": "Technology"
@@ -1129,7 +1129,7 @@ export const Channels = [
     "subscriptionPlans": [{
       "id": "5f84f83f5edaca3b4d1289cb",
       "title": "HUB Discord Supporter",
-      "description": "This tier includes access to our Discord community, and our monthly live streams hosted on YouTube\n\nIncludes:\n\n- Discord\n- Exclusive live streams\n- Text posts",
+      "description": "This tier includes access to our Discord community, and our monthly live streams hosted on YouTube\n- Discord\n- Exclusive live streams\n- Text posts",
       "price": "2.00",
       "priceYearly": null,
       "currency": "usd",
@@ -1142,7 +1142,7 @@ export const Channels = [
     }, {
       "id": "5f937a625edaca3b4d12a2d9",
       "title": "HUB Gold Supporter",
-      "description": "This tier gives access to our videos at 1080p for streaming and download, including behind the scenes content. Some main channel videos will be provided here on Floatplane earlier than on YouTube (timing will vary), as we aren't slaves to the algorithm! You'll also gain access to an exclusive channel in our Discord community, and you'll be able to download our calibrated display profiles.\n  \nIncludes:\n- Early access to main channel videos (1080p)\n- Behind the scenes videos (1080p)\n- Display calibration profiles\n- Discord + No Sleep Zone\n- Exclusive live streams\n- Text posts",
+      "description": "This tier gives access to our videos at 1080p for streaming and download, including behind the scenes content. Some main channel videos will be provided here on Floatplane earlier than on YouTube (timing will vary), as we aren't slaves to the algorithm! You'll also gain access to an exclusive channel in our Discord community, and you'll be able to download our calibrated display profiles.\n- Early access to main channel videos (1080p)\n- Behind the scenes videos (1080p)\n- Display calibration profiles\n- Discord + No Sleep Zone\n- Exclusive live streams\n- Text posts",
       "price": "5.00",
       "priceYearly": "50.00",
       "currency": "usd",
@@ -1155,7 +1155,7 @@ export const Channels = [
     }, {
       "id": "5f937aa0a6756c3b887e2354",
       "title": "HUB Gold 4K Supporter",
-      "description": "This tier is the same as HUB Gold, except with access to 4K quality videos for streaming and downloading\n  \nIncludes:\n- Early access to main channel videos (4K)\n- Behind the scenes videos (4K)\n- Display calibration profiles\n- Discord + No Sleep Zone\n- Exclusive live streams\n- Text posts",
+      "description": "This tier is the same as HUB Gold, except with access to 4K quality videos for streaming and downloading\n- Early access to main channel videos (4K)\n- Behind the scenes videos (4K)\n- Display calibration profiles\n- Discord + No Sleep Zone\n- Exclusive live streams\n- Text posts",
       "price": "10.00",
       "priceYearly": "100.00",
       "currency": "usd",
@@ -1168,7 +1168,7 @@ export const Channels = [
     }, {
       "id": "5faf4360a763765988bb4146",
       "title": "HUB Extreme Supporter",
-      "description": "This is the same as the Gold 4K tier, but for those that want to provide additional support to the channel. We sincerely appreciate your contribution\n\nIncludes:\n- Early access to main channel videos (4K)\n- Behind the scenes videos (4K)\n- Display calibration profiles\n- Discord + No Sleep Zone\n- Exclusive live streams\n- Text posts",
+      "description": "This is the same as the Gold 4K tier, but for those that want to provide additional support to the channel. We sincerely appreciate your contribution\n- Early access to main channel videos (4K)\n- Behind the scenes videos (4K)\n- Display calibration profiles\n- Discord + No Sleep Zone\n- Exclusive live streams\n- Text posts",
       "price": "25.00",
       "priceYearly": "250.00",
       "currency": "usd",
@@ -1191,7 +1191,7 @@ export const Channels = [
     },
     "title": "Craft Computing",
     "urlname": "CraftComputing",
-    "description": "Welcome to Craft Computing! Everything you want in a PC Enthusiast Tech Channel, including a side of Craft Beer. I cover everything from Gaming and Workstation builds and reviews, to HomeLab Tutorials and LIVE News. \n\nThrough Floatplane, you'll not only get the same high-quality videos from the YouTube channel, but also access to my Exclusive Discord Server and premium content.\n\nThanks so much for your continued support... Cheers!",
+    "description": "Welcome to Craft Computing! Everything you want in a PC Enthusiast Tech Channel, including a side of Craft Beer. I cover everything from Gaming and Workstation builds and reviews, to HomeLab Tutorials and LIVE News. \nThrough Floatplane, you'll not only get the same high-quality videos from the YouTube channel, but also access to my Exclusive Discord Server and premium content.\nThanks so much for your continued support... Cheers!",
     "about": "Started in 2017 by IT-Professional-Turned-Tech-Reviewer, Craft Computing aims to look at all aspects of being a PC and Technology enthusiast, including PCs, SBCs, Workstations, Servers, Networking and MORE!",
     "category": {
       "id": "59f94c0bdd241b70349eb727",
@@ -1448,7 +1448,7 @@ export const Channels = [
     }, {
       "id": "607652487ce12862acffddbb",
       "title": "Squad Bee",
-      "description": "Here's what the squad bee tier gets you!\n• Your name in the credits of videos on ALL of my channels, and with a star or circle next to your name!\n• Access to the patron-only chat in my Discord server\n• Early access to videos in 4k (or 1080p if 4k is unavailable)\n• Full access to exclusive streams\n• Full access to art raffles\n• Early access to music + Studio quality WAVE files\n• Full access to patron-only polls\n\n• Access to stems or project files for some of my music\n• Access to project files for tutorials\n• Unrestricted access to patron-only events",
+      "description": "Here's what the squad bee tier gets you!\n• Your name in the credits of videos on ALL of my channels, and with a star or circle next to your name!\n• Access to the patron-only chat in my Discord server\n• Early access to videos in 4k (or 1080p if 4k is unavailable)\n• Full access to exclusive streams\n• Full access to art raffles\n• Early access to music + Studio quality WAVE files\n• Full access to patron-only polls\n• Access to stems or project files for some of my music\n• Access to project files for tutorials\n• Unrestricted access to patron-only events",
       "price": "10.00",
       "priceYearly": "110.00",
       "currency": "usd",
@@ -1474,7 +1474,7 @@ export const Channels = [
     }, {
       "id": "63f3034b0a98eed9ca3c014b",
       "title": "Honey Bee",
-      "description": "The Honey Bee tier grants access to ALL previous perks, as well as:\n\n• Your name in the credits of videos on ALL of my channels, but with your name in a pastel orange!\n\n• Your name in the video description of every video\n\n• Priority access to special events and video recording opportunities",
+      "description": "The Honey Bee tier grants access to ALL previous perks, as well as:\n• Your name in the credits of videos on ALL of my channels, but with your name in a pastel orange!\n• Your name in the video description of every video\n• Priority access to special events and video recording opportunities",
       "price": "25.00",
       "priceYearly": "260.00",
       "currency": "usd",

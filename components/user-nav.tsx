@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import Logo, { LogoFull } from "./images";
 import { useState, useEffect } from "react";
@@ -29,7 +30,9 @@ export function UserNav() {
   ];
   const MobileView = () => {
     const [openMenu, setOpenMenu] = useState(false);
+    const [openSubs, setOpenSubs] = useState(false);
     const [openProfile, setOpenProfile] = useState(false);
+    
     return (
       <>
         <nav className="flex flex-row justify-between items-center p-2">
@@ -62,6 +65,7 @@ export function UserNav() {
                   {USERPROFILE.map((item, index) => (
                     <a
                       key={index}
+                      onClick={() => item.title == "Subscriptions" && setOpenSubs(!openSubs)}
                       href={item.link}
                       className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${item.style}`}
                     >
@@ -111,6 +115,12 @@ export function UserNav() {
             </div>
           </div>
         )}
+
+        {openSubs && (
+          <div className="w-full p-4 bg-white dark:bg-gray-800 rounded-md shadow-lg text-center dark:border dark:border-t-transparent dark:border-x-transparent dark:border-b-gray-400">
+              <div className="flex flex-row flex-wrap space-x-2"><ShowMySubscriptions expand={false} /></div>
+          </div>
+        )}
       </>
     );
   };
@@ -137,10 +147,11 @@ export function UserNav() {
                 /> : 
                 <MagnifyingGlassIcon className={`w-full h-auto text-white rounded-lg hover:bg-gray-50/25 p-2`} onClick={() => setExpand(!expand)} />
               }
-            </div>
-            <div className={`mt-4 mb-8 flex flex-col ${expand ? "overflow-y-scroll" : "overflow-y-hidden items-center"}`}>
+              <div className={`mt-4 mb-8 flex flex-col ${expand ? "overflow-y-scroll" : "overflow-y-hidden items-center"}`}>
               <ShowMySubscriptions expand={expand} />
             </div>
+            </div>
+            
             <div className={`pb-10 flex justify-between items-center ${expand ? "flex-row" : "flex-col space-y-4"} duration-500`}>
               <div>
               <div className={`${viewProfile ? "opacity-100 visible" : "opacity-0 invisible"} fixed bottom-0 mb-28 shadow-md rounded-md border-primary/25 bg-secondary/75 duration-300`}>
