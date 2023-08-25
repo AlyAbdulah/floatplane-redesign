@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import Script from 'next/script'
+import LayoutClient from './layout-client'
 
 const font = Roboto({ subsets: ['latin'], weight: ['500'] })
 
@@ -44,7 +45,7 @@ export default function RootLayout({
               `}
             </Script>
         <body className={font.className + "bg-white text-black dark:bg-gray-950 dark:text-white subpixel-antialiased scroll-smooth"}>
-          {children}
+          <LayoutClient>{children}</LayoutClient>
       </body>
     </html>
   )

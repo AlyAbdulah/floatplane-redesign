@@ -2,6 +2,8 @@
 "use client";
 import Logo, { LogoFull } from "./images";
 import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import { selectSubscribedCreators } from "@/store/creatorsSlice";
 import {
   Bars3BottomLeftIcon,
   WrenchIcon,
@@ -35,6 +37,7 @@ export function UserNav() {
     const [openMenu, setOpenMenu] = useState(false);
     const [openSubs, setOpenSubs] = useState(false);
     const [openProfile, setOpenProfile] = useState(false);
+    const subscribedCreators = useSelector(selectSubscribedCreators);
 
     return (
       <>
@@ -67,22 +70,43 @@ export function UserNav() {
                   aria-orientation="vertical"
                   aria-labelledby="options-menu"
                 >
-                  {USERPROFILE.map((item, index) => (
-                    <a
-                      key={index}
-                      onClick={() =>
-                        item.title == "Subscriptions" && setOpenSubs(!openSubs)
-                      }
-                      href={item.link}
-                      className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${item.style}`}
-                    >
-                      <span className="inline-flex items-center">
-                        <item.icon className="h-6 w-6" />
-                        &nbsp;
-                        {item.title}
-                      </span>
-                    </a>
-                  ))}
+                  {USERPROFILE.map((item, index) =>
+                    item.title == "Subscriptions" ? (
+                      subscribedCreators.length > 0 && (
+                        <a
+                          key={index}
+                          onClick={() =>
+                            item.title == "Subscriptions" &&
+                            setOpenSubs(!openSubs)
+                          }
+                          href={item.link}
+                          className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${item.style}`}
+                        >
+                          <span className="inline-flex items-center">
+                            <item.icon className="h-6 w-6" />
+                            &nbsp;
+                            {item.title}
+                          </span>
+                        </a>
+                      )
+                    ) : (
+                      <a
+                        key={index}
+                        onClick={() =>
+                          item.title == "Subscriptions" &&
+                          setOpenSubs(!openSubs)
+                        }
+                        href={item.link}
+                        className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ${item.style}`}
+                      >
+                        <span className="inline-flex items-center">
+                          <item.icon className="h-6 w-6" />
+                          &nbsp;
+                          {item.title}
+                        </span>
+                      </a>
+                    )
+                  )}
                 </div>
               )}
             </div>
@@ -122,12 +146,17 @@ export function UserNav() {
             </div>
           </div>
         )}
-
-        {openSubs && (
-          <div className="w-full p-4 bg-white dark:bg-gray-800 rounded-md shadow-lg text-center dark:border dark:border-t-transparent dark:border-x-transparent dark:border-b-gray-400">
-              <ShowMySubscriptions expand={false} containerClass="grid gap-2 grid-cols-3" btnClass="justify-center"/>
-          </div>
-        )}
+        <div
+          className={`${
+            openSubs ? "block" : "hidden"
+          } h-auto w-full p-4 bg-white dark:bg-gray-800 rounded-b-md shadow-lg text-center dark:border dark:border-t-transparent dark:border-x-transparent dark:border-b-gray-400`}
+        >
+          <ShowMySubscriptions
+            expand={false}
+            containerClass="grid gap-2 grid-cols-3"
+            btnClass="justify-center"
+          />
+        </div>
       </>
     );
   };
@@ -167,7 +196,11 @@ export function UserNav() {
                 expand ? "overflow-y-scroll" : "overflow-y-hidden items-center"
               }`}
             >
-              <ShowMySubscriptions expand={expand} containerClass="" btnClass="justify-start" />
+              <ShowMySubscriptions
+                expand={expand}
+                containerClass=""
+                btnClass="justify-start"
+              />
             </div>
           </div>
 
