@@ -106,7 +106,7 @@ export function Subscribe(props: {
       <div
         className={` ${
           show ? "" : "hidden"
-        } inset-0 items-center flex flex-col justify-center h-full w-full my-2 p-2 rounded-md bg-white dark:bg-gray-800`}
+        } inset-0 items-center flex flex-col justify-center h-full w-full my-2 p-2 rounded-md shadow-md bg-gray-200/75 dark:bg-gray-800`}
       >
         <div className="w-full flex justify-between py-4 px-2">
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -127,7 +127,7 @@ export function Subscribe(props: {
             subscriptionPlans.map((data) => 
             <div 
               key={data.id} 
-              className="flex flex-col p-4 text-center rounded-lg border border-gray-100 shadow dark:border-gray-600"
+              className="flex flex-col p-4 text-center rounded-lg border border-gray-200 shadow bg-gray-100 dark:bg-transparent dark:border-gray-600"
             >
               <h3 className="mb-4 text-2xl font-semibold">{data.title}</h3>
               <div className="flex justify-center items-baseline my-8">
@@ -149,7 +149,7 @@ export function Subscribe(props: {
               </ul>
               <button 
                 onClick={() => handleSubscribe()}
-                className="bg-primary hover:bg-primary/75 font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-auto"
+                className="bg-primary hover:bg-primary/75 text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-auto"
               >
                 Get started
               </button>

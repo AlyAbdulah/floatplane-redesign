@@ -212,7 +212,7 @@ export function FAQContent() {
           <input
             type="search"
             id="search"
-            className="block w-full p-4 pl-10 text-sm text-gray-900 outline-transparent dark:outline-gray-900 rounded-lg bg-gray-50 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
+            className="block w-full p-4 pl-10 text-sm text-gray-900 outline-transparent dark:outline-gray-900 rounded-lg bg-gray-200/75 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white"
             placeholder="Search"
             onChange={(event) => setKeyword(event.target.value)}
           />

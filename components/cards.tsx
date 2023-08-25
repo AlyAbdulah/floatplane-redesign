@@ -19,7 +19,7 @@ export function HomePageCard(props: {
         className={"rounded-lg w-full h-auto md:w-2/3 "+alignment}
       />
       <div className="space-y-4 md:place-self-center">
-        <h2 className="semibold text-xl">{title}</h2>
+        <h2 className="font-semibold text-xl">{title}</h2>
         <p>{description}</p>
       </div>
     </article>
