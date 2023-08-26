@@ -3,7 +3,7 @@ import { LogoFull } from "./images";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white grid grid-cols-1 md:grid-cols-2 p-8 space-y-4">
+    <footer className="bg-black text-white grid grid-cols-1 md:grid-cols-2 p-8 space-y-4 md:space-y-0">
       <ul className="inline-flex space-x-4 self-center justify-self-center md:justify-self-end">
         <li>
           <Link href="/support">FAQs</Link>
