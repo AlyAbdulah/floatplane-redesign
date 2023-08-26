@@ -14,11 +14,11 @@ export default function Hero() {
             New Horizon of Content
           </h1>
           <h2 className="text-2xl py-2 md:py-4 md:text-3xl font-medium">
-            Get the best content first, and get bonus content like behind the
+            Get the best content first and get bonus content like behind the
             scenes!
           </h2>
           <div className="py-4 my-2 text-xl font-bold">
-            <div className="hover:-translate-y-2 duration-300 w-fit"><ButtonDefault text="Get Started" link="/browse" /></div>
+            <div className="hover:-translate-y-2 duration-300 w-fit"><ButtonDefault text="Start Watching" link="/browse" /></div>
           </div>
         </div>
       </article>

@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="overflow-hidden h-screen flex flex-col md:flex-row">
       <UserNav />
-      <section className="overflow-y-scroll flex-1 p-4 ">{children}</section>
+      <section className="overflow-y-scroll flex-1 p-4" id="section-container">{children}</section>
     </div>
   );
 }

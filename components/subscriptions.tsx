@@ -7,12 +7,14 @@ import { subscribeCreator, selectAllCreators, selectSubscribedCreators } from "@
 export function ShowSubscriptions() {
   const [cIndex, setCIndex] = useState("");
   const [cTitle, setCTitle] = useState("");
-  const [sPlans, setSPlans] = useState<Array<any>>([]);
+  const [scrollPos, setScrollPos] = useState(0);
   const [showPlans, setShowPlans] = useState(false);
+  const [sPlans, setSPlans] = useState<Array<any>>([]);
 
   const allCreators = useSelector(selectAllCreators);
 
   const handleShowPlans = (cIndex: string, ctitle: string, cPlans: Array<any>) => {
+    setScrollPos(handleCurrentScrollPos())
     setCIndex(cIndex)
     setCTitle(ctitle)
     setSPlans(cPlans)
@@ -21,8 +23,20 @@ export function ShowSubscriptions() {
   };
 
   useEffect(() => {
-    localStorage.removeItem("ids")
-  }, [])
+    if (showPlans) {
+      document.querySelector("#section-container")!.scroll(0, 0)
+    }
+    else {
+      document.querySelector("#section-container")!.scroll(0, (scrollPos))
+    }
+  }, [scrollPos, showPlans])
+
+  const handleCurrentScrollPos = () => {
+    const scroller = document.querySelector("#section-container");
+    const scrollVal = scroller != null ? scroller.scrollTop : 0
+    console.log(scrollVal)
+    return scrollVal
+  }
 
   return (
     <>
@@ -30,12 +44,13 @@ export function ShowSubscriptions() {
         <Subscribe
           cid={cIndex}
           title={cTitle}
+          scrollPos={scrollPos}
           show={showPlans}
           subscriptionPlans={sPlans}
           handleShow={setShowPlans}
         />
       ) : (
-        <div className="grid gap-4 @xs:grid-cols-1 @xl:grid-cols-2 @4xl:grid-cols-3 @6xl:grid-cols-4 mt-3 justify-items-center ">
+        <div className="grid gap-4 @xs:grid-cols-1 @xl:grid-cols-2 @4xl:grid-cols-3 @6xl:grid-cols-4 mt-3 justify-items-center">
           {allCreators.map((channel) => !channel.subscribed && (
 
             <div
@@ -81,7 +96,8 @@ export function ShowSubscriptions() {
 export function Subscribe(props: {
   cid: string;
   title: string
-  show: boolean;
+  show: boolean
+  scrollPos: number
   subscriptionPlans: Array<
     {
       id: string;
@@ -93,7 +109,7 @@ export function Subscribe(props: {
   >
   handleShow: Function
 }) {
-  const {cid, title, show, subscriptionPlans} = props
+  const {cid, title, show, scrollPos, subscriptionPlans} = props
 
   const dispatch = useDispatch();
 
@@ -101,6 +117,10 @@ export function Subscribe(props: {
     dispatch(subscribeCreator(cid));
     props.handleShow(false)
   };
+
+  const handleClose = () => {
+    props.handleShow(false)
+  }
   return (
     <>
       <div
@@ -113,7 +133,7 @@ export function Subscribe(props: {
             {title} Subscription Plans
           </h3>
           <button
-            onClick={() => props.handleShow(false)}
+            onClick={() => handleClose()}
             type="button"
             className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
             data-modal-hide="defaultModal"
