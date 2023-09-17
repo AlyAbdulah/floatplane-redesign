@@ -61,7 +61,7 @@ export function ShowSubscriptions() {
                 <img
                   className="p-4 h-48 w-48 rounded-full mx-auto"
                   src={channel.icon.path}
-                  alt="Channel image"
+                  alt={`${channel.title} Channel image`}
                 />
               </a>
               <div className="px-5 pb-5 space-y-4">
@@ -215,3 +215,29 @@ export function ShowMySubscriptions(props: { expand: boolean, containerClass: st
     </>
   );
 }
+
+interface ImgProp{
+  src: string;
+  alt: string;
+}
+const ImageWithSkeleton = (props: { src: string, alt: string }) => {
+  const {src, alt} = props
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
+  return (
+    
+    <>
+    <div className={`mt-2 p-4 h-48 w-48 rounded-full mx-auto bg-gray-300 ${imageLoaded ? 'hidden' : 'animate-pulse'}`}></div>
+    <img
+      src={src}
+      alt={alt}
+      onLoad={handleImageLoad}
+      className={`p-4 h-48 w-48 rounded-full mx-auto ${imageLoaded ? 'block' : 'hidden'}`}
+    />
+  </>
+  );
+};

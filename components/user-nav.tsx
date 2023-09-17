@@ -213,7 +213,7 @@ export function UserNav() {
               <div
                 className={`${
                   viewProfile ? "opacity-100 visible" : "opacity-0 invisible"
-                } fixed bottom-0 mb-28 shadow-md rounded-md border-primary/25 bg-secondary/75 duration-300`}
+                } fixed bottom-0 ${expand ? "mb-16" : "mb-28"} shadow-md rounded-md border-primary/25 bg-secondary/75 duration-300`}
               >
                 {USERPROFILE.map((item, index) => (
                   <a
